@@ -11,19 +11,19 @@ export const Dashboard = () => {
     }, []);
 
     const getBooksData = async () => {
-        let res = await axios.get("http://localhost:3001/books");
+        let res = await axios.get("http://localhost:3000/books");
         setBooks(res.data);
     };
 
     const handleSortDate = async() => {
         let res = await axios.get(
-            "http://localhost:3001/books?_sort=release_date"
+            "http://localhost:3000/books?_sort=release_date"
         );
         setBooks(res.data);
     }
     const handleSortTitle = async () => {
         let res = await axios.get(
-            "http://localhost:3001/books?_sort=title"
+            "http://localhost:3000/books?_sort=title"
         );
         setBooks(res.data);
     };

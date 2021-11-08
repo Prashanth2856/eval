@@ -10,10 +10,10 @@ export const AuthorDetails = () => {
 
     useEffect(() => {
         getBookData();
-    },[]);
+    });
 
     const getBookData = async () => {
-        let res = await axios.get("http://localhost:3001/authors", {
+        let res = await axios.get("http://localhost:3000/authors", {
             params: {
                 id: id,
             },

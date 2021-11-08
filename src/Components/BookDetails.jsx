@@ -21,7 +21,7 @@ export const BookDetails = () => {
     }, []);
 
     const getBookData = async () => {
-        let res = await axios.get("http://localhost:3001/books", {
+        let res = await axios.get("http://localhost:3000/books", {
             params: {
                 id: id,
             },
